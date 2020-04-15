@@ -1,4 +1,16 @@
 <h1>Add New Book</h1>
 
-<form>
+<form method="POST" action="/books">        
+    Title:
+    <input type="text" name="title">
+    Pages:
+    <input type="number" name="pages">
+    Author ID:
+    <select name="authorId">
+        <% authors.forEach(a => { %>
+            <option value="<%=a.id%>"><%=a.firstname%> <%=a.lastname%></option>
+         
+        <% }) %>
+    </select>
+    <input type="submit" value="ADD">
 </form>

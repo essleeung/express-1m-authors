@@ -1,1 +1,7 @@
 <h1>All Books</h1>
+<% books.forEach(b => { %>
+  <h2><%=b.title%></h2>
+  
+  <p>Pages: <%=b.pages%></p>
+  <a href="/books/<%=b.id%>">See details</a>
+<% }) %>gitr 
